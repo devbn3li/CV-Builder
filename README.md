@@ -1,6 +1,6 @@
 # CV Builder
 
-This repository contains a CV Builder Website that enable you make ATS CV Friendly
+This repository contains a CV Builder Website that enable you make ATS CV Friendly .
 
 ## Installation
 
@@ -33,4 +33,4 @@ This will start the server at http://localhost:5000.
 
 
 ## Author
-##### Mohamed Ali, Souad Hamdy
+##### Mohamed Ali, Souad Hamdy .
