@@ -81,7 +81,7 @@ const HobbiesSection = () => {
               <div className="flex gap-2 grow">
                 <button
                   onClick={btnEmojiHandler}
-                  className={`bg-gray-100 hover:bg-gray-200 p-2 ${
+                  className={`bg-navy-100 hover:bg-navy-200 p-2 ${
                     activeEmojiBtn == data[k].id && showEmoji
                       ? "bg-yellow-200"
                       : activeEmojiBtn != data[k].id && showEmoji
@@ -97,7 +97,7 @@ const HobbiesSection = () => {
                   placeholder="Type"
                   onChange={textChange}
                   data-id={data[k].id}
-                  className="bg-gray-100 border-b-2 border-gray-300 py-2 px-4 focus:outline-none focus:border-gray-400 grow"
+                  className="bg-navy-100 border-b-2 border-navy-300 py-2 px-4 focus:outline-none focus:border-navy-400 grow"
                 />
               </div>
             </div>
@@ -106,7 +106,7 @@ const HobbiesSection = () => {
 
         <button
           onClick={addNew}
-          className="bg-gray-100 border-2 border-gray-200 py-2 font-bold"
+          className="bg-navy-100 border-2 border-navy-200 py-2 font-bold"
         >
           Add New Hobbies
         </button>

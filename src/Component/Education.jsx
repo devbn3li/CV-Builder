@@ -72,14 +72,14 @@ function Education() {
               )}
             </div>
             <input
-              className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+              className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
               type="text"
               placeholder="Degree Name"
               onChange={(e) => handleCertification(e.target.value, idx)}
             />
 
             <input
-              className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+              className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
               type="text"
               placeholder="Univercity Name"
               onChange={(e) => handleUnivercityName(e.target.value, idx)}
@@ -87,13 +87,13 @@ function Education() {
 
             <div className="rounded-md overflow-hidden flex gap-2 text-xs  ">
               <input
-                className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+                className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
                 type="date"
                 placeholder="Start Date"
                 onChange={(e) => handleStartDate(e.target.value, idx)}
               />
               <input
-                className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+                className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
                 type="date"
                 placeholder="end Date"
                 onChange={(e) => handleEndDate(e.target.value, idx)}

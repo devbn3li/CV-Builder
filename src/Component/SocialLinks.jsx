@@ -59,28 +59,28 @@ const SocialLinks = () => {
         className={`mt-6 flex flex-col gap-2 px-8 ${!showInputs && "hidden"}`}
       >
         <input
-          className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+          className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
           type="text"
           placeholder="Website URL"
           onChange={handleWebsiteURLChange}
         />
 
         <input
-          className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+          className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
           type="text"
           placeholder="Facebook URL"
           onChange={handleFacebookURLChange}
         />
 
         <input
-          className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+          className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
           type="text"
           placeholder="Twitter URL"
           onChange={handleTwitterURLChange}
         />
 
         <input
-          className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+          className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
           type="text"
           placeholder="LinkedIn URL"
           onChange={handleLinkedinURLChange}
