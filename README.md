@@ -14,3 +14,23 @@ This repository contains a CV Builder Website that enable you make ATS CV Friend
 
     bash
     cd CV-Builder
+
+3. Install dependencies:
+
+    bash
+    npm install
+    
+
+## Running the Server
+
+To start the CV Builder project, run the following command:
+
+bash
+npm dev run
+
+
+This will start the server at http://localhost:5000.
+
+
+## Author
+##### Mohamed Ali, Souad Hamdy
