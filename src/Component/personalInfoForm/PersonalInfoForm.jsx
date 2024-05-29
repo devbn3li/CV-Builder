@@ -82,7 +82,7 @@ const PersonalInfoForm = ({
         </div>
         {showImage && (
           <div
-            className="text-center w-full rounded-lg border-dashed p-16 border border-gray-700 bg-gray-700/40 text-primary-300 transition-all hover:text-primary-100 hover:border-primary-200 focus:outline-none"
+            className="text-center w-full rounded-lg border-dashed p-16 border border-navy-700 bg-navy-700/40 text-primary-300 transition-all hover:text-primary-100 hover:border-primary-200 focus:outline-none"
             onDragOver={(event) => event.preventDefault()}
             onDrop={handleDrop}
           >
@@ -94,7 +94,7 @@ const PersonalInfoForm = ({
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="35px"
-                  fill="gray"
+                  fill="navy"
                   viewBox="0 0 24 24"
                   width="35px"
                 >
