@@ -1,4 +1,3 @@
-# ALX Team
 # CV Builder
 
 This repository contains a CV Builder Website that enable you make ATS CV Friendly
