@@ -20,7 +20,7 @@ save.addEventListener("click", () => {
 edit.addEventListener("click", () => {
   for (let i = 0; i < input.length; i++) {
     input[i].style.backgroundColor = "transparent";
-    input[i].style.opacity = .9;
+    input[i].style.opacity = .95;
     input[i].removeAttribute("disabled");
   }
   input[0].focus();
