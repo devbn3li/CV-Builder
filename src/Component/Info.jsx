@@ -25,7 +25,7 @@ const Info = (props) => {
         <h2>{props.about}</h2>
         <h1 className="text-rose-600 text-xl">Person image : </h1>
         {/* div contain img *****************************/}
-        <div className="aspect-square w-[50px] bg-gray-700 rounded-full ">
+        <div className="aspect-square w-[50px] bg-navy-700 rounded-full ">
           {props.imageUrl && (
             <img
               src={props.imageUrl}

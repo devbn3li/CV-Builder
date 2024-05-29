@@ -33,7 +33,7 @@ function Navbar() {
             <a
               href={Social.Youtube.herf}
               target="_blank"
-              className="text-sm p-2 hover:bg-blue-700/40 duration-300 rounded-full font-semibold leading-6 text-gray-200 flex items-center gap-2"
+              className="text-sm p-2 hover:bg-blue-700/40 duration-300 rounded-full font-semibold leading-6 text-navy-200 flex items-center gap-2"
             >
               <svg
                 className="h-5 w-5"

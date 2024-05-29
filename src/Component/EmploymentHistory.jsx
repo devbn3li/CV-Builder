@@ -81,14 +81,14 @@ function EmploymentHistory() {
               )}
             </div>
             <input
-              className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+              className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
               type="text"
               placeholder="Job title"
               onChange={(e) => handleJobTitle(e.target.value, idx)}
             />
 
             <input
-              className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+              className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
               type="text"
               placeholder="Company name"
               onChange={(e) => handleCompanyName(e.target.value, idx)}
@@ -96,13 +96,13 @@ function EmploymentHistory() {
 
             <div className="rounded-md overflow-hidden flex gap-2 text-xs  ">
               <input
-                className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+                className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
                 type="date"
                 placeholder="Start Date"
                 onChange={(e) => handleStartDate(e.target.value, idx)}
               />
               <input
-                className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+                className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
                 type="date"
                 placeholder="end Date"
                 onChange={(e) => handleEndDate(e.target.value, idx)}
@@ -114,7 +114,7 @@ function EmploymentHistory() {
               <textarea
                 placeholder="Some details..."
                 onChange={(e) => handleDetails(e.target.value, idx)}
-                className="bg-transparent w-full border border-gray-600  p-2 placeholder-gray-400 focus:outline-none rounded-md"
+                className="bg-transparent w-full border border-navy-600  p-2 placeholder-navy-400 focus:outline-none rounded-md"
               ></textarea>
             </div>
           </div>
