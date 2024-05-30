@@ -1,38 +1,20 @@
 function Navbar() {
   const Social = {
-    FaceBook: {
-      herf: "#",
-    },
-
-    LinkedIn: {
-      herf: "#",
-    },
-
-    Instagram: {
-      herf: "#",
-    },
-
     Youtube: {
-      herf: "#",
-    },
-
-    Discord: {
       herf: "#",
     },
   };
 
   return (
     <nav className=" text-amber-50 h-[3.5rem]  bg-blue-900 z-[100] flex justify-between items-center px-12 fixed w-full  select-none top-0 left-0">
-      <a className="flex relative  " href="#" target="_blank">
         <h1>Resume Builder</h1>
-      </a>
+
 
       <div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <div className="flex items-center gap-4">
             <a
               href={Social.Youtube.herf}
-              target="_blank"
               className="text-sm p-2 hover:bg-blue-700/40 duration-300 rounded-full font-semibold leading-6 text-navy-200 flex items-center gap-2"
             >
               <svg

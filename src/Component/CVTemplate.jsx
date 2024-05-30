@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   useUserName,
   useUserJob,
@@ -14,40 +15,59 @@ import {
 } from "../Pages/Data/SocialLinks.data";
 import { useEmploymentHistory } from "../Pages/Data/EmpoymentHistory.data";
 import { useEducation } from "../Pages/Data/Education.data";
+import clsx from 'clsx';
+
+const SectionTitle = ({ children }) => (
+  <p className="font-bold text-[25px] break-words">{children}</p>
+);
+
+const ContactInfo = ({ info, label }) => (
+  info ? <p className="font-semibold">{label}: {info}</p> : null
+);
+
+const ExperienceItem = ({ startDate, endDate, companyName, jobTitle, details }) => (
+  <div className="mt-4 break-words">
+    <p className="text-slate-600">{startDate} - {endDate}</p>
+    <p className="text-slate-600">{companyName}</p>
+    <p className="font-bold text-[16px] mt-2">{jobTitle}</p>
+    <p className="text-slate-600">{details}</p>
+  </div>
+);
+
+const EducationItem = ({ startDate, endDate, degreeName, universityName }) => (
+  <div className="mt-4 break-words">
+    <p>{startDate} - {endDate}</p>
+    <p>{degreeName}</p>
+    <p>{universityName}</p>
+  </div>
+);
 
 function CVTemplate() {
-  // Personal information
   const { userName } = useUserName();
   const { userJob } = useUserJob();
-  // const { userAge } = useUserAge();
   const { userPhone } = useUserPhone();
   const { userEmail } = useUserEmail();
-  const { userImageUrl, showImage } = useUserImageUrl();
   const { userAbout } = useUserAbout();
-
-  // Social Links
   const { websiteURL } = useWebsiteURL();
   const { facebookURL } = useFacebookURL();
   const { twitterURL } = useTwitterURL();
   const { linkedInURL } = useLinkedInURL();
-
-  // Employment History
   const { employmentHistory } = useEmploymentHistory();
-
-  // Education
   const { education } = useEducation();
 
   return (
     <section className="bg-white w-[21cm] h-[27.8cm] p-[50px]">
       <div className="text-center">
-        <p
-          className={`font-semibold break-words ${
-            userName.length > 10 ? "text-3xl" : "text-5xl"
-          }  min-w-[220px]`}
-        >
+        <p className={clsx("font-semibold break-words", {
+          "text-3xl": userName.length > 10,
+          "text-5xl": userName.length <= 10,
+        })}>
           {userName}
         </p>
-        <p className={`mt-5 break-words ${userJob.length > 20 ? "text-xl" : "text-2xl"}`}>
+        <p className={clsx("mt-5 break-words", {
+          "text-xl": userJob.length > 20,
+          "text-2xl": userJob.length <= 20,
+        })}>
           {userJob}
         </p>
         <p className="text-[20px] mt-2 break-words">{userAbout}</p>
@@ -56,50 +76,42 @@ function CVTemplate() {
       <div className="mt-[10px]">
         <div className="grid gap-8">
           <div>
-            <p className="font-bold text-[25px] break-words">Education</p>
+            <SectionTitle>Education</SectionTitle>
             {education.map((ele, idx) => (
-              <div key={idx} className="mt-4 break-words">
-                <p>
-                  {ele.startDate} - {ele.endDate}
-                </p>
-                <p>{ele.degreeName}</p>
-                <p>{ele.univercityName}</p>
-              </div>
+              <EducationItem
+                key={idx}
+                startDate={ele.startDate}
+                endDate={ele.endDate}
+                degreeName={ele.degreeName}
+                universityName={ele.univercityName}
+              />
             ))}
           </div>
           <div>
-            <p className="font-bold text-[25px] break-words">Contact</p>
+            <SectionTitle>Contact</SectionTitle>
             <div className="flex flex-col gap-2 mt-2 text-lg break-words">
-              <p className="font-semibold">{userPhone}</p>
-              <p className="font-semibold">{userEmail}</p>
-              {facebookURL !== `` && (
-                <p className="font-semibold">{facebookURL}</p>
-              )}
-              {twitterURL !== `` && (
-                <p className="font-semibold">{twitterURL}</p>
-              )}
-              {linkedInURL !== `` && (
-                <p className="font-semibold">{linkedInURL}</p>
-              )}
-              {websiteURL !== `` && (
-                <p className="font-semibold">{websiteURL}</p>
-              )}
+              <ContactInfo info={userPhone} label="Phone" />
+              <ContactInfo info={userEmail} label="Email" />
+              <ContactInfo info={facebookURL} label="Facebook" />
+              <ContactInfo info={twitterURL} label="Twitter" />
+              <ContactInfo info={linkedInURL} label="LinkedIn" />
+              <ContactInfo info={websiteURL} label="Website" />
             </div>
           </div>
         </div>
       </div>
 
       <div className="mt-10">
-        <p className="font-bold text-[25px] break-words">Experience</p>
+        <SectionTitle>Experience</SectionTitle>
         {employmentHistory.map((ele, idx) => (
-          <div key={idx} className="mt-4 break-words">
-            <p className="text-slate-600">
-              {ele.startDate} - {ele.endDate}
-            </p>
-            <p className="text-slate-600">{ele.companyName}</p>
-            <p className="font-bold text-[16px] mt-2">{ele.jobTitle}</p>
-            <p className="text-slate-600">{ele.details}</p>
-          </div>
+          <ExperienceItem
+            key={idx}
+            startDate={ele.startDate}
+            endDate={ele.endDate}
+            companyName={ele.companyName}
+            jobTitle={ele.jobTitle}
+            details={ele.details}
+          />
         ))}
       </div>
     </section>
