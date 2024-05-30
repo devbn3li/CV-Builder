@@ -47,7 +47,7 @@ function CVTemplate() {
         >
           {userName}
         </p>
-        <p className={mt-5 break-words ${userJob.length > 20 ? "text-xl" : "text-2xl"}}>
+        <p className={`mt-5 break-words ${userJob.length > 20 ? "text-xl" : "text-2xl"}`}>
           {userJob}
         </p>
         <p className="text-[20px] mt-2 break-words">{userAbout}</p>
