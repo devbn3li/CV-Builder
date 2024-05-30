@@ -1,14 +1,13 @@
+import { useState, useRef } from "react";
+import generatePDF, { Resolution } from "react-to-pdf";
+import { HiDownload, HiArrowLeft, HiArrowRight, HiEye } from "react-icons/hi";
 import Education from "../Component/Education";
 import Container from "../Component/Container";
-import Sociallinks from "../Component/SocialLinks";
+import SocialLinks from "../Component/SocialLinks";
 import Footer from "../Component/Footer";
 import Navbar from "../Component/Navbar";
 import EmploymentHistory from "../Component/EmploymentHistory";
-import { HiDownload, HiArrowLeft, HiArrowRight, HiEye } from "react-icons/hi";
-import { useState } from "react";
 import Button1 from "../Component/Button1";
-import generatePDF, { Resolution } from "react-to-pdf";
-import { useRef } from "react";
 import PersonalInfoFormContainer from "../Component/personalInfoForm/PersonalInfoFormContainer";
 
 function App() {
@@ -21,28 +20,16 @@ function App() {
 
   // Options of Download the PDF
   const optionsDownload = {
-    // // default is `save`
-    // method: 'open',
-    // // default is Resolution.MEDIUM = 3, which should be enough, higher values
-    // // increases the image quality but also the size of the PDF, so be careful
-    // // using values higher than 10 when having multiple pages generated, it
-    // // might cause the page to crash or hang.
     filename: "Resume.pdf",
     resolution: Resolution.LOW,
 
     canvas: {
-      // default is 'image/jpeg'
       qualityRatio: 1,
     },
-    // Customize any value passed to the jsPDF instance and html2canvas
-    // function. You probably will not need this and things can break,
-    // so use with caution.
     overrides: {
-      // see https://artskydj.github.io/jsPDF/docs/jsPDF.html for more options
       pdf: {
         compress: true,
       },
-      // see https://html2canvas.hertzen.com/configuration for more options
       canvas: {
         useCORS: true,
         scale: 10,
@@ -52,13 +39,12 @@ function App() {
 
   // Options of View the PDF
   const optionsView = {
-    // default is `save`
     method: "open",
     ...optionsDownload,
   };
 
   return (
-    <div className="relative scroll-smooth overflow-auto  bg-black/80">
+    <div className="relative overflow-auto  bg-black/80">
       <Navbar />
       <main className="flex relative overflow-auto justify-end py-[2.5rem] mt-4  h-screen box-border">
         <nav
@@ -68,7 +54,7 @@ function App() {
         >
           <div className="overflow-y-scroll h-full">
             <PersonalInfoFormContainer />
-            <Sociallinks />
+            <SocialLinks />
             <EmploymentHistory />
             <Education />
           </div>
@@ -94,7 +80,6 @@ function App() {
           Icon={HiEye}
         />
         <Button1
-          classes=""
           ClickFunc={() => generatePDF(targetRef, optionsDownload)}
           Icon={HiDownload}
         />
