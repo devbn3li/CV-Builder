@@ -1,64 +1,64 @@
 import {
-  useUserName,
-  useUserJob,
-  useUserPhone,
-  useUserEmail,
-  useUserAbout,
-  useUserImageUrl,
+    useUserName,
+    useUserJob,
+    useUserPhone,
+    useUserEmail,
+    useUserAbout,
+    useUserImageUrl,
 } from "../Pages/Data/PersonalInformation.data";
 import {
-  useWebsiteURL,
-  useFacebookURL,
-  useTwitterURL,
-  useLinkedInURL,
+    useWebsiteURL,
+    useFacebookURL,
+    useTwitterURL,
+    useLinkedInURL,
 } from "../Pages/Data/SocialLinks.data";
 import { useEmploymentHistory } from "../Pages/Data/EmpoymentHistory.data";
 import { useEducation } from "../Pages/Data/Education.data";
 
 function CVTemplate() {
-  // Personal information
-  const { userName } = useUserName();
-  const { userJob } = useUserJob();
-  // const { userAge } = useUserAge();
-  const { userPhone } = useUserPhone();
-  const { userEmail } = useUserEmail();
-  const { userImageUrl, showImage } = useUserImageUrl();
-  const { userAbout } = useUserAbout();
+    // Personal information
+    const { userName } = useUserName();
+    const { userJob } = useUserJob();
+    // const { userAge } = useUserAge();
+    const { userPhone } = useUserPhone();
+    const { userEmail } = useUserEmail();
+    const { userImageUrl, showImage } = useUserImageUrl();
+    const { userAbout } = useUserAbout();
 
-  // Social Links
-  const { websiteURL } = useWebsiteURL();
-  const { facebookURL } = useFacebookURL();
-  const { twitterURL } = useTwitterURL();
-  const { linkedInURL } = useLinkedInURL();
+    // Social Links
+    const { websiteURL } = useWebsiteURL();
+    const { facebookURL } = useFacebookURL();
+    const { twitterURL } = useTwitterURL();
+    const { linkedInURL } = useLinkedInURL();
 
-  // Employment History
-  const { employmentHistory } = useEmploymentHistory();
+    // Employment History
+    const { employmentHistory } = useEmploymentHistory();
 
-  // Education
-  const { education } = useEducation();
+    // Education
+    const { education } = useEducation();
 
-  return (
+    return (
     <section className="bg-white w-[21cm] h-[27.8cm] p-[50px]">
       <div className="text-center">
         <p
-          className={`font-semibold break-words ${
+          className={`font-semibold ${
             userName.length > 10 ? "text-3xl" : "text-5xl"
           }  min-w-[220px]`}
         >
           {userName}
         </p>
-        <p className={mt-5 break-words ${userJob.length > 20 ? "text-xl" : "text-2xl"}}>
-          {userJob}
+                <p className={`mt-5 ${userJob.length > 20 ? "text-xl" : "text-2xl"}`}>
+                    {userJob}
         </p>
-        <p className="text-[20px] mt-2 break-words">{userAbout}</p>
+        <p className="text-[20px] max-w-[60px] mt-2">{userAbout}</p>
       </div>
 
       <div className="mt-[10px]">
         <div className="grid gap-8">
           <div>
-            <p className="font-bold text-[25px] break-words">Education</p>
+            <p className="font-bold text-[25px]">Education</p>
             {education.map((ele, idx) => (
-              <div key={idx} className="mt-4 break-words">
+              <div key={idx} className="mt-4">
                 <p>
                   {ele.startDate} - {ele.endDate}
                 </p>
@@ -68,8 +68,8 @@ function CVTemplate() {
             ))}
           </div>
           <div>
-            <p className="font-bold text-[25px] break-words">Contact</p>
-            <div className="flex flex-col gap-2 mt-2 text-lg break-words">
+            <p className="font-bold text-[25px]">Contact</p>
+            <div className="flex flex-col gap-2 mt-2 text-lg">
               <p className="font-semibold">{userPhone}</p>
               <p className="font-semibold">{userEmail}</p>
               {facebookURL !== `` && (
@@ -90,9 +90,9 @@ function CVTemplate() {
       </div>
 
       <div className="mt-10">
-        <p className="font-bold text-[25px] break-words">Experience</p>
+        <p className="font-bold text-[25px]">Experience</p>
         {employmentHistory.map((ele, idx) => (
-          <div key={idx} className="mt-4 break-words">
+          <div key={idx} className="mt-4">
             <p className="text-slate-600">
               {ele.startDate} - {ele.endDate}
             </p>
@@ -102,7 +102,7 @@ function CVTemplate() {
           </div>
         ))}
       </div>
-    </section>
+    </section >
   );
 }
 
