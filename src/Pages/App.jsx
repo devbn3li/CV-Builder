@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="relative overflow-auto  bg-black/80">
       <Navbar />
-      <main className="flex relative overflow-auto justify-end py-[2.5rem] mt-4  h-screen box-border">
+      <main className="flex relative overflow-auto justify-end py-[2.5rem] mt-4  h-full box-border">
         <nav
           className={`w-full max-w-[320px] scroll-auto scrollbar fixed left-0 ${
             isSideBarActive ? "-translate-x-full" : "translate-x-0"
