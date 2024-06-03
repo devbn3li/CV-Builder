@@ -48,7 +48,3 @@ This will start the server at ```http://localhost:5000```.
   - pages/: Contains page components like Home and Preview.
   - App.jsx: The root component of the application.
   - index.jsx: The entry point for the React application.
-
-
-## Author
-##### Mohamed Ali, Souad Helmy .
