@@ -39,6 +39,16 @@ npm dev run
 
 This will start the server at ```http://localhost:5000```.
 
+## Project Structure
+
+- public/: Contains static assets like the images folders.
+- src/: Contains the main source code for the application.
+  - assets/: Contains images, styles, and other assets.
+  - components/: Contains React components such as Header, Footer, and CVContainer and so on.
+  - pages/: Contains page components like Home and Preview.
+  - App.jsx: The root component of the application.
+  - index.jsx: The entry point for the React application.
+
 
 ## Author
 ##### Mohamed Ali, Souad Helmy .
